@@ -125,11 +125,17 @@ class NumToWord
 
         int num = scan.nextInt();
         
-        while(num>0){
-            int  word = num%10;
-            num = num /10;
+        int reversed = 0;
+          
         
-    
+        while(num>0){
+                
+            reversed = reversed * 10 +num % 10; 
+            num = num / 10;  
+        }
+        while(reversed>0){
+            int word = reversed % 10;
+            reversed = reversed /  10;
         
         switch(word) {
             case 0:
