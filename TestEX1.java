@@ -211,19 +211,22 @@ class Magical {
          
         System.out.print("Enter a number: ");
         int num = scanner.nextInt();
-        
-        int sum = 0;
+         int sum =0;
 
-        while (num > 9 || sum > 9) {
-            if (num == 0) {
-                num = sum;
-                sum = 0;
-            }
-            sum += num % 10;
-            num = num / 10;
+        while (num >9) {
+            sum = 0; 
+            int temp = num;
+               
+            
+            while(temp>0){
+            sum += temp % 10;
+            temp = temp / 10;
+        }
+        num = sum ;
+      
         }
 
-        if (num + sum == 1) {
+        if (num== 1) {
             System.out.println("Magic Number");
         } else {
             System.out.println("Not a Magic Number");
@@ -235,7 +238,9 @@ class Magical {
 }
 
 
-  
+
+
+
   
 
 
