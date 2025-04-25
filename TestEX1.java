@@ -204,10 +204,14 @@ class Fibonacci{
     }
 
     //Magical number
-
-    class Magical {
+class Magical {
     public static void main(String[] args) {
-        int num = 109;
+        
+        Scanner scanner = new Scanner(System.in);
+         
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        
         int sum = 0;
 
         while (num > 9 || sum > 9) {
@@ -224,10 +228,15 @@ class Fibonacci{
         } else {
             System.out.println("Not a Magic Number");
         }
+
+
+        scanner.close();
     }
 }
-}
 
+
+  
+  
 
 
 
